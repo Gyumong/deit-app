@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import {Row,Col} from 'antd';
 import {UserOutlined} from '@ant-design/icons';
 import Footer from '../common/Footer';
+import {Link} from 'react-router-dom';
 
 const MainPageBlock= styled.div`
     width:360px;
-    height:640px;
+    height:590px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -49,11 +50,14 @@ const ButtonBlock= styled.div`
 `;
 function MainPage() {
     return (
+        <>
         <MainPageBlock>
+            <Link to="/mypage">
             <LoginForm>
                 <UserOutlined style={{fontSize: '50px'}}/>
                 <div>로그인/회원가입</div>
             </LoginForm>
+            </Link>
             <ButtonBlock>
                 <Row>
                 <Col md={24} xs={24}>
@@ -73,8 +77,8 @@ function MainPage() {
                 </Col>
                 </Row>
             </ButtonBlock>
-            <Footer/>
         </MainPageBlock>
+            </>
     )
 }
 

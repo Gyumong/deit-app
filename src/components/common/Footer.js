@@ -4,13 +4,17 @@ import {HomeOutlined} from '@ant-design/icons';
 import {Button} from 'antd';
 
 const FooterBlock= styled.div`
-    display:block;
+    display:flex;
+    justify-content:center;
     position:fixed;
-    z-index:100;
+    z-index:3;
     color:black;
     width: 340px;
     height: 50px;
-    margin: 590px 10px 5px 10px;
+    margin: 0 auto;
+    @media screen and (min-width:768px){
+        margin:0 auto;
+    }
 
 `;
 

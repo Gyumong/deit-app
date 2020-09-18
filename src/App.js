@@ -1,8 +1,11 @@
 import React from 'react';
 import MainPage from './components/pages/MainPage';
+import MyPage from './components/pages/MyPage';
 import Footer from './components/common/Footer';
 import styled from 'styled-components';
 import {createGlobalStyle} from 'styled-components';
+import {Route,Link,Switch} from 'react-router-dom';
+import Test from './components/pages/Test';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -50,8 +53,17 @@ function App() {
   return (
     <>
       <GlobalStyles/>
+      <Switch>
+      <Route path="/" exact>
       <MainPage/>
-
+      </Route>
+      <Route path="/mypage">
+        <MyPage/>
+      </Route>
+      <Route path="/test">
+        <Test />
+      </Route>
+      </Switch>
     </>
   )
 }
