@@ -2,20 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 import {HomeOutlined} from '@ant-design/icons';
 import {Button} from 'antd';
+import {Link} from 'react-router-dom';
 
 const FooterBlock= styled.div`
-    display:flex;
-    justify-content:center;
-    position:fixed;
-    z-index:3;
     color:black;
     width: 340px;
-    height: 50px;
-    margin: 0 auto;
+    margin-left:300px;
     @media screen and (min-width:768px){
         margin:0 auto;
     }
-
 `;
 
 const ButtonBar= styled.div`
@@ -44,7 +39,9 @@ function Footer() {
             <ButtonBar>
             <Button>라이프로깅</Button>
             <Button>운동</Button>
-            <HomeOutlined style={{fontSize:"48px"}} />
+            <Link to="/">
+                <HomeOutlined style={{fontSize:"48px"}} />
+            </Link>
             <Button>라이프로깅</Button>
             <Button>운동</Button>
             </ButtonBar>

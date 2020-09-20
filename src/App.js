@@ -1,6 +1,8 @@
 import React from 'react';
 import MainPage from './components/pages/MainPage';
 import MyPage from './components/pages/MyPage';
+import Profile from './components/pages/Profile';
+import Option from './components/pages/Option';
 import Footer from './components/common/Footer';
 import styled from 'styled-components';
 import {createGlobalStyle} from 'styled-components';
@@ -52,18 +54,25 @@ li{
 function App() {
   return (
     <>
-      <GlobalStyles/>
-      <Switch>
-      <Route path="/" exact>
-      <MainPage/>
-      </Route>
-      <Route path="/mypage">
-        <MyPage/>
-      </Route>
-      <Route path="/test">
-        <Test />
-      </Route>
-      </Switch>
+    <GlobalStyles/>
+    <Switch>
+    <Route path="/" exact>
+    <MainPage/>
+    </Route>
+    <Route path="/mypage">
+      <MyPage/>
+    </Route>
+    <Route path="/test">
+      <Test/>
+    </Route>
+    <Route path="/profile">
+      <Profile/>
+    </Route>
+    <Route path="/option">
+      <Option/>
+    </Route>
+    </Switch>
+    <Footer/>
     </>
   )
 }
